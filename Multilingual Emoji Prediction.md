@@ -1,3 +1,7 @@
+# -Week 1-2
 # -MLC-State-of-the-art
-# -Affect and Creative Language in Tweets-Task 2: Multilingual Emoji Prediction
-# -Coordinator:
+
+# -Week 3-4
+# - Arhitectura(modulele principale)
+# - Clase (fiecare modul detaliat)
+# - Use Case (scenariile principale de utilizare)
