@@ -1,0 +1,4283 @@
+///////////// A request at 11/03/2014 11:54:09 /////////////
+//// Result Status
+Success
+//// Execution Time
+246ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ltl
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnexttrue hasnextfalse next</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](next =&gt; (*) hasnexttrue)</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnexttrue hasnextfalse next</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](next =&gt; (*) hasnexttrue)</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnexttrue hasnextfalse next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+next -&gt; violation
+hasnextfalse -&gt; s1
+hasnexttrue -&gt; s2
+default s1]
+
+violation[
+]
+
+s2[
+next -&gt; s1
+hasnextfalse -&gt; s1
+hasnexttrue -&gt; s2
+default s1]
+
+s1[
+next -&gt; violation
+hasnextfalse -&gt; s1
+hasnexttrue -&gt; s2
+default s1]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnexttrue hasnextfalse next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+next -&gt; violation
+hasnextfalse -&gt; s1
+hasnexttrue -&gt; s2
+default s1]
+
+violation[
+]
+
+s2[
+next -&gt; s1
+hasnextfalse -&gt; s1
+hasnexttrue -&gt; s2
+default s1]
+
+s1[
+next -&gt; violation
+hasnextfalse -&gt; s1
+hasnexttrue -&gt; s2
+default s1]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnexttrue hasnextfalse next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  next -&gt; violation
+  hasnexttrue -&gt; s2
+  hasnextfalse -&gt; s0_s1
+]
+s2[
+  default s0_s1
+  next -&gt; s0_s1
+  hasnexttrue -&gt; s2
+  hasnextfalse -&gt; s0_s1
+]
+violation[
+
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> next hasnexttrue hasnextfalse</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{next=[[], [hasnexttrue, next, hasnextfalse], [hasnexttrue], [hasnexttrue, next], [hasnexttrue, hasnextfalse], [hasnextfalse]], hasnexttrue=[[], [hasnexttrue, next, hasnextfalse], [hasnexttrue], [hasnexttrue, next], [hasnexttrue, hasnextfalse], [hasnextfalse]], hasnextfalse=[[hasnexttrue, next, hasnextfalse], [], [hasnexttrue], [hasnexttrue, next], [hasnexttrue, hasnextfalse], [hasnextfalse]]}
+// violation Coenables
+{next=[[next, hasnexttrue, hasnextfalse], [next], [next, hasnextfalse], [next, hasnexttrue]], hasnexttrue=[[next, hasnexttrue, hasnextfalse], [next], [next, hasnextfalse], [next, hasnexttrue]], hasnextfalse=[[next, hasnexttrue, hasnextfalse], [next], [next, hasnextfalse], [next, hasnexttrue]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnexttrue hasnextfalse next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  next -&gt; violation
+  hasnexttrue -&gt; s2
+  hasnextfalse -&gt; s0_s1
+]
+s2[
+  default s0_s1
+  next -&gt; s0_s1
+  hasnexttrue -&gt; s2
+  hasnextfalse -&gt; s0_s1
+]
+violation[
+
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> next hasnexttrue hasnextfalse</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{next=[[], [hasnexttrue, next, hasnextfalse], [hasnexttrue], [hasnexttrue, next], [hasnexttrue, hasnextfalse], [hasnextfalse]], hasnexttrue=[[], [hasnexttrue, next, hasnextfalse], [hasnexttrue], [hasnexttrue, next], [hasnexttrue, hasnextfalse], [hasnextfalse]], hasnextfalse=[[hasnexttrue, next, hasnextfalse], [], [hasnexttrue], [hasnexttrue, next], [hasnexttrue, hasnextfalse], [hasnextfalse]]}
+// violation Coenables
+{next=[[next, hasnexttrue, hasnextfalse], [next], [next, hasnextfalse], [next, hasnexttrue]], hasnexttrue=[[next, hasnexttrue, hasnextfalse], [next], [next, hasnextfalse], [next, hasnexttrue]], hasnextfalse=[[next, hasnexttrue, hasnextfalse], [next], [next, hasnextfalse], [next, hasnexttrue]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:14 /////////////
+//// Result Status
+Success
+//// Execution Time
+255ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ltl
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](next =&gt; (not updatesource S create))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](next =&gt; (not updatesource S create))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+violation[
+]
+
+s1[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+s2[
+next -&gt; s2
+updatesource -&gt; s1
+create -&gt; s2
+default s2]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+violation[
+]
+
+s1[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+s2[
+next -&gt; s2
+updatesource -&gt; s1
+create -&gt; s2
+default s2]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  updatesource -&gt; s0_s1
+  next -&gt; violation
+  create -&gt; s2
+]
+violation[
+
+]
+s2[
+  default s2
+  updatesource -&gt; s0_s1
+  next -&gt; s2
+  create -&gt; s2
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> updatesource next create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{updatesource=[[], [updatesource], [updatesource, create, next], [create, next], [create], [updatesource, create]], next=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]], create=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]]}
+// violation Coenables
+{updatesource=[[updatesource, next, create], [next], [updatesource, next]], next=[[updatesource, next, create], [updatesource, next]], create=[[updatesource, next, create], [updatesource, next]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  updatesource -&gt; s0_s1
+  next -&gt; violation
+  create -&gt; s2
+]
+violation[
+
+]
+s2[
+  default s2
+  updatesource -&gt; s0_s1
+  next -&gt; s2
+  create -&gt; s2
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> updatesource next create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{updatesource=[[], [updatesource], [updatesource, create, next], [create, next], [create], [updatesource, create]], next=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]], create=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]]}
+// violation Coenables
+{updatesource=[[updatesource, next, create], [next], [updatesource, next]], next=[[updatesource, next, create], [updatesource, next]], create=[[updatesource, next, create], [updatesource, next]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:17 /////////////
+//// Result Status
+Success
+//// Execution Time
+328ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ltl
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](useIter =&gt; (not updateMap S createColl))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](useIter =&gt; (not updateMap S createColl))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+createColl -&gt; s1
+createIter -&gt; s2
+updateMap -&gt; s2
+useIter -&gt; violation
+default s2]
+
+violation[
+]
+
+s2[
+createColl -&gt; s1
+createIter -&gt; s2
+updateMap -&gt; s2
+useIter -&gt; violation
+default s2]
+
+s1[
+createColl -&gt; s1
+createIter -&gt; s1
+updateMap -&gt; s2
+useIter -&gt; s1
+default s1]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+createColl -&gt; s1
+createIter -&gt; s2
+updateMap -&gt; s2
+useIter -&gt; violation
+default s2]
+
+violation[
+]
+
+s2[
+createColl -&gt; s1
+createIter -&gt; s2
+updateMap -&gt; s2
+useIter -&gt; violation
+default s2]
+
+s1[
+createColl -&gt; s1
+createIter -&gt; s1
+updateMap -&gt; s2
+useIter -&gt; s1
+default s1]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s2_s0[
+  default s2_s0
+  createIter -&gt; s2_s0
+  createColl -&gt; s1
+  useIter -&gt; violation
+  updateMap -&gt; s2_s0
+]
+violation[
+
+]
+s1[
+  default s1
+  createIter -&gt; s1
+  createColl -&gt; s1
+  useIter -&gt; s1
+  updateMap -&gt; s2_s0
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> createIter createColl useIter updateMap</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{createIter=[[], [createColl, updateMap], [createIter], [createColl, updateMap, createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]], createColl=[[], [createColl, updateMap], [createIter], [createColl, updateMap, createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]], useIter=[[createColl, updateMap], [], [createIter, createColl, updateMap], [createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]], updateMap=[[createColl, updateMap], [], [createIter, createColl, updateMap], [createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]]}
+// violation Coenables
+{createIter=[[useIter, updateMap], [createIter, useIter, updateMap], [useIter], [createIter, useIter], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]], createColl=[[useIter, updateMap], [createIter, useIter, updateMap], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]], useIter=[[useIter, updateMap], [createIter, useIter, updateMap], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]], updateMap=[[useIter, updateMap], [createIter, useIter, updateMap], [useIter], [createIter, useIter], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s2_s0[
+  default s2_s0
+  createIter -&gt; s2_s0
+  createColl -&gt; s1
+  useIter -&gt; violation
+  updateMap -&gt; s2_s0
+]
+violation[
+
+]
+s1[
+  default s1
+  createIter -&gt; s1
+  createColl -&gt; s1
+  useIter -&gt; s1
+  updateMap -&gt; s2_s0
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> createIter createColl useIter updateMap</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{createIter=[[], [createColl, updateMap], [createIter], [createColl, updateMap, createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]], createColl=[[], [createColl, updateMap], [createIter], [createColl, updateMap, createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]], useIter=[[createColl, updateMap], [], [createIter, createColl, updateMap], [createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]], updateMap=[[createColl, updateMap], [], [createIter, createColl, updateMap], [createIter], [updateMap, createIter], [createColl], [createColl, createIter], [createIter, createColl, updateMap, useIter], [createColl, createIter, useIter], [createColl, useIter], [updateMap], [createColl, updateMap, useIter]]}
+// violation Coenables
+{createIter=[[useIter, updateMap], [createIter, useIter, updateMap], [useIter], [createIter, useIter], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]], createColl=[[useIter, updateMap], [createIter, useIter, updateMap], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]], useIter=[[useIter, updateMap], [createIter, useIter, updateMap], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]], updateMap=[[useIter, updateMap], [createIter, useIter, updateMap], [useIter], [createIter, useIter], [createIter, createColl, useIter, updateMap], [createColl, useIter, updateMap]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:21 /////////////
+//// Result Status
+Success
+//// Execution Time
+305ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ltl
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](write =&gt; (not close S open))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](write =&gt; (not close S open))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+close -&gt; s1
+write -&gt; violation
+open -&gt; s2
+default s1]
+
+violation[
+]
+
+s1[
+close -&gt; s1
+write -&gt; violation
+open -&gt; s2
+default s1]
+
+s2[
+close -&gt; s1
+write -&gt; s2
+open -&gt; s2
+default s2]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+close -&gt; s1
+write -&gt; violation
+open -&gt; s2
+default s1]
+
+violation[
+]
+
+s1[
+close -&gt; s1
+write -&gt; violation
+open -&gt; s2
+default s1]
+
+s2[
+close -&gt; s1
+write -&gt; s2
+open -&gt; s2
+default s2]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  write -&gt; violation
+  close -&gt; s0_s1
+  open -&gt; s2
+]
+violation[
+
+]
+s2[
+  default s2
+  write -&gt; s2
+  close -&gt; s0_s1
+  open -&gt; s2
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> write close open</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{write=[[], [write, open, close], [open, close], [close], [open], [write, open]], close=[[], [write, open, close], [open, close], [close], [open], [write, open]], open=[[], [write, close, open], [open, close], [close], [open], [write, open]]}
+// violation Coenables
+{write=[[write, close, open], [write, close]], close=[[write], [write, close, open], [write, close]], open=[[write, close, open], [write, close]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  write -&gt; violation
+  close -&gt; s0_s1
+  open -&gt; s2
+]
+violation[
+
+]
+s2[
+  default s2
+  write -&gt; s2
+  close -&gt; s0_s1
+  open -&gt; s2
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> write close open</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{write=[[], [write, open, close], [open, close], [close], [open], [write, open]], close=[[], [write, open, close], [open, close], [close], [open], [write, open]], open=[[], [write, close, open], [open, close], [close], [open], [write, open]]}
+// violation Coenables
+{write=[[write, close, open], [write, close]], close=[[write], [write, close, open], [write, close]], open=[[write, close, open], [write, close]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:24 /////////////
+//// Result Status
+Success
+//// Execution Time
+239ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ltl
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](next =&gt; (not updatesource S create))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ltl</Logic>
+        <Formula>[](next =&gt; (not updatesource S create))</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ltl
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+violation[
+]
+
+s1[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+s2[
+next -&gt; s2
+updatesource -&gt; s1
+create -&gt; s2
+default s2]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+violation[
+]
+
+s1[
+next -&gt; violation
+updatesource -&gt; s1
+create -&gt; s2
+default s1]
+
+s2[
+next -&gt; s2
+updatesource -&gt; s1
+create -&gt; s2
+default s2]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  updatesource -&gt; s0_s1
+  next -&gt; violation
+  create -&gt; s2
+]
+violation[
+
+]
+s2[
+  default s2
+  updatesource -&gt; s0_s1
+  next -&gt; s2
+  create -&gt; s2
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> updatesource next create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{updatesource=[[], [updatesource], [updatesource, create, next], [create, next], [create], [updatesource, create]], next=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]], create=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]]}
+// violation Coenables
+{updatesource=[[updatesource, next, create], [next], [updatesource, next]], next=[[updatesource, next, create], [updatesource, next]], create=[[updatesource, next, create], [updatesource, next]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0_s1[
+  default s0_s1
+  updatesource -&gt; s0_s1
+  next -&gt; violation
+  create -&gt; s2
+]
+violation[
+
+]
+s2[
+  default s2
+  updatesource -&gt; s0_s1
+  next -&gt; s2
+  create -&gt; s2
+]
+</Formula>
+    </Property>
+    <Categories>violation</Categories>
+    <CreationEvents> updatesource next create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// violation Enables
+{updatesource=[[], [updatesource], [updatesource, create, next], [create, next], [create], [updatesource, create]], next=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]], create=[[], [updatesource], [updatesource, next, create], [create, next], [create], [updatesource, create]]}
+// violation Coenables
+{updatesource=[[updatesource, next, create], [next], [updatesource, next]], next=[[updatesource, next, create], [updatesource, next]], create=[[updatesource, next, create], [updatesource, next]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:27 /////////////
+//// Result Status
+Success
+//// Execution Time
+198ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(hasnext hasnext* next)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(hasnext hasnext* next)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   hasnext -&gt; s1
+]
+s1 [
+   hasnext -&gt; s1
+   next -&gt; s0
+]
+alias match = s0 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   hasnext -&gt; s1
+]
+s1 [
+   hasnext -&gt; s1
+   next -&gt; s0
+]
+alias match = s0 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  hasnext -&gt; s1
+]
+s1[
+  next -&gt; s0
+  hasnext -&gt; s1
+]
+alias match = s0
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> next hasnext</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{next=[[], [hasnext], [next, hasnext]], hasnext=[[], [hasnext], [next, hasnext]]}
+// fail Coenables
+{next=[[next], [hasnext], [next, hasnext]], hasnext=[[next], [hasnext], [next, hasnext]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  hasnext -&gt; s1
+]
+s1[
+  next -&gt; s0
+  hasnext -&gt; s1
+]
+alias match = s0
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> next hasnext</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{next=[[], [hasnext], [next, hasnext]], hasnext=[[], [hasnext], [next, hasnext]]}
+// fail Coenables
+{next=[[next], [hasnext], [next, hasnext]], hasnext=[[next], [hasnext], [next, hasnext]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:31 /////////////
+//// Result Status
+Success
+//// Execution Time
+314ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>create next* updatesource updatesource* next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>create next* updatesource updatesource* next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   create -&gt; s1
+]
+s1 [
+   updatesource -&gt; s2
+   next -&gt; s1
+]
+s2 [
+   updatesource -&gt; s2
+   next -&gt; s3
+]
+s3 [
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   create -&gt; s1
+]
+s1 [
+   updatesource -&gt; s2
+   next -&gt; s1
+]
+s2 [
+   updatesource -&gt; s2
+   next -&gt; s3
+]
+s3 [
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  create -&gt; s1
+]
+s3[
+
+]
+s2[
+  next -&gt; s3
+  updatesource -&gt; s2
+]
+s1[
+  next -&gt; s1
+  updatesource -&gt; s2
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{next=[[next, create], [create], [next, create, updatesource], [create, updatesource]], create=[[]], updatesource=[[next, create], [create], [next, create, updatesource], [create, updatesource]]}
+// match Coenables
+{next=[[next, updatesource]], create=[[next, updatesource]], updatesource=[[next], [next, updatesource]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  create -&gt; s1
+]
+s3[
+
+]
+s2[
+  next -&gt; s3
+  updatesource -&gt; s2
+]
+s1[
+  next -&gt; s1
+  updatesource -&gt; s2
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{next=[[next, create], [create], [next, create, updatesource], [create, updatesource]], create=[[]], updatesource=[[next, create], [create], [next, create, updatesource], [create, updatesource]]}
+// match Coenables
+{next=[[next, updatesource]], create=[[next, updatesource]], updatesource=[[next], [next, updatesource]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:34 /////////////
+//// Result Status
+Success
+//// Execution Time
+230ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>add unsafe_contains remove</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>add unsafe_contains unsafe_contains*</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>add unsafe_contains remove</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>add unsafe_contains unsafe_contains*</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>add unsafe_contains remove</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   add -&gt; s1
+]
+s1 [
+   unsafe_contains -&gt; s2
+]
+s2 [
+   unsafe_contains -&gt; s2
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>add unsafe_contains remove</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   add -&gt; s1
+]
+s1 [
+   unsafe_contains -&gt; s2
+]
+s2 [
+   unsafe_contains -&gt; s2
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>add unsafe_contains remove</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  add -&gt; s1
+]
+s1[
+  unsafe_contains -&gt; s2
+]
+s2[
+  unsafe_contains -&gt; s2
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> add</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{add=[[]], unsafe_contains=[[add], [add, unsafe_contains]], remove=[]}
+// match Coenables
+{add=[[unsafe_contains]], unsafe_contains=[[unsafe_contains]], remove=[]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>add unsafe_contains remove</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  add -&gt; s1
+]
+s1[
+  unsafe_contains -&gt; s2
+]
+s2[
+  unsafe_contains -&gt; s2
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> add</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{add=[[]], unsafe_contains=[[add], [add, unsafe_contains]], remove=[]}
+// match Coenables
+{add=[[unsafe_contains]], unsafe_contains=[[unsafe_contains]], remove=[]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:38 /////////////
+//// Result Status
+Success
+//// Execution Time
+263ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync createSet syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>sync createSet 
+              (asyncCreateIter | (syncCreateIter accessIter))</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync createSet syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>sync createSet 
+              (asyncCreateIter | (syncCreateIter accessIter))</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync createSet syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   sync -&gt; s1
+]
+s1 [
+   createSet -&gt; s2
+]
+s2 [
+   syncCreateIter -&gt; s3
+   asyncCreateIter -&gt; s4
+]
+s3 [
+   accessIter -&gt; s4
+]
+s4 [
+]
+alias match = s4 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync createSet syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   sync -&gt; s1
+]
+s1 [
+   createSet -&gt; s2
+]
+s2 [
+   syncCreateIter -&gt; s3
+   asyncCreateIter -&gt; s4
+]
+s3 [
+   accessIter -&gt; s4
+]
+s4 [
+]
+alias match = s4 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync createSet syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  sync -&gt; s1
+]
+s2[
+  syncCreateIter -&gt; s3
+  asyncCreateIter -&gt; s4
+]
+s1[
+  createSet -&gt; s2
+]
+s3[
+  accessIter -&gt; s4
+]
+s4[
+
+]
+alias match = s4
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> sync</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{sync=[[]], syncCreateIter=[[createSet, sync]], accessIter=[[createSet, sync, syncCreateIter]], asyncCreateIter=[[createSet, sync]], createSet=[[sync]]}
+// match Coenables
+{sync=[[syncCreateIter, accessIter, createSet], [asyncCreateIter, createSet]], syncCreateIter=[[accessIter]], accessIter=[], asyncCreateIter=[], createSet=[[syncCreateIter, accessIter], [asyncCreateIter]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync createSet syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  sync -&gt; s1
+]
+s2[
+  syncCreateIter -&gt; s3
+  asyncCreateIter -&gt; s4
+]
+s1[
+  createSet -&gt; s2
+]
+s3[
+  accessIter -&gt; s4
+]
+s4[
+
+]
+alias match = s4
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> sync</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{sync=[[]], syncCreateIter=[[createSet, sync]], accessIter=[[createSet, sync, syncCreateIter]], asyncCreateIter=[[createSet, sync]], createSet=[[sync]]}
+// match Coenables
+{sync=[[syncCreateIter, accessIter, createSet], [asyncCreateIter, createSet]], syncCreateIter=[[accessIter]], accessIter=[], asyncCreateIter=[], createSet=[[syncCreateIter, accessIter], [asyncCreateIter]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:41 /////////////
+//// Result Status
+Success
+//// Execution Time
+226ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   next -&gt; s1
+]
+s1 [
+   next -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   next -&gt; s1
+]
+s1 [
+   next -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  next -&gt; s1
+]
+s2[
+
+]
+s1[
+  next -&gt; s2
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{hasnext=[], next=[[], [next]]}
+// match Coenables
+{hasnext=[], next=[[next]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  next -&gt; s1
+]
+s2[
+
+]
+s1[
+  next -&gt; s2
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{hasnext=[], next=[[], [next]]}
+// match Coenables
+{hasnext=[], next=[[next]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:45 /////////////
+//// Result Status
+Success
+//// Execution Time
+202ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>getInstance update reset digest</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>getInstance update (update* reset* update* digest)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>getInstance update reset digest</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>getInstance update (update* reset* update* digest)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>getInstance update reset digest</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   getInstance -&gt; s1
+]
+s1 [
+   update -&gt; s2
+]
+s2 [
+   update -&gt; s3
+   reset -&gt; s4
+   digest -&gt; s2
+]
+s3 [
+   update -&gt; s3
+   reset -&gt; s4
+   digest -&gt; s2
+]
+s4 [
+   update -&gt; s5
+   reset -&gt; s4
+   digest -&gt; s2
+]
+s5 [
+   update -&gt; s5
+   digest -&gt; s2
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>getInstance update reset digest</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   getInstance -&gt; s1
+]
+s1 [
+   update -&gt; s2
+]
+s2 [
+   update -&gt; s3
+   reset -&gt; s4
+   digest -&gt; s2
+]
+s3 [
+   update -&gt; s3
+   reset -&gt; s4
+   digest -&gt; s2
+]
+s4 [
+   update -&gt; s5
+   reset -&gt; s4
+   digest -&gt; s2
+]
+s5 [
+   update -&gt; s5
+   digest -&gt; s2
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>getInstance update reset digest</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  getInstance -&gt; s1
+]
+s2_s3[
+  reset -&gt; s4
+  update -&gt; s2_s3
+  digest -&gt; s2_s3
+]
+s5[
+  update -&gt; s5
+  digest -&gt; s2_s3
+]
+s1[
+  update -&gt; s2_s3
+]
+s4[
+  reset -&gt; s4
+  update -&gt; s5
+  digest -&gt; s2_s3
+]
+alias match = s2_s3
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> reset getInstance update digest</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{reset=[[], [update, digest, getInstance], [getInstance], [update, getInstance], [reset, update, getInstance], [reset, update, digest, getInstance]], getInstance=[[], [update, digest, getInstance], [getInstance], [reset, update, getInstance], [update, getInstance], [reset, update, digest, getInstance]], update=[[], [update, digest, getInstance], [getInstance], [reset, update, getInstance], [update, getInstance], [reset, update, digest, getInstance]], digest=[[], [update, digest, getInstance], [getInstance], [reset, update, getInstance], [update, getInstance], [reset, update, digest, getInstance]]}
+// fail Coenables
+{reset=[[reset, getInstance, update], [update], [reset, update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, digest], [reset, getInstance, digest], [getInstance, update], [digest], [reset, getInstance]], getInstance=[[reset, getInstance, update], [update], [reset, update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, update], [reset, getInstance, digest], [getInstance, digest], [digest], [reset, getInstance]], update=[[reset, getInstance, update], [update], [reset, update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, update], [getInstance, digest], [reset, getInstance, digest], [digest], [reset, getInstance]], digest=[[reset, getInstance, update], [reset, update], [update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, update], [getInstance, digest], [reset, getInstance, digest], [digest], [reset, getInstance]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>getInstance update reset digest</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  getInstance -&gt; s1
+]
+s2_s3[
+  reset -&gt; s4
+  update -&gt; s2_s3
+  digest -&gt; s2_s3
+]
+s5[
+  update -&gt; s5
+  digest -&gt; s2_s3
+]
+s1[
+  update -&gt; s2_s3
+]
+s4[
+  reset -&gt; s4
+  update -&gt; s5
+  digest -&gt; s2_s3
+]
+alias match = s2_s3
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> reset getInstance update digest</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{reset=[[], [update, digest, getInstance], [getInstance], [update, getInstance], [reset, update, getInstance], [reset, update, digest, getInstance]], getInstance=[[], [update, digest, getInstance], [getInstance], [reset, update, getInstance], [update, getInstance], [reset, update, digest, getInstance]], update=[[], [update, digest, getInstance], [getInstance], [reset, update, getInstance], [update, getInstance], [reset, update, digest, getInstance]], digest=[[], [update, digest, getInstance], [getInstance], [reset, update, getInstance], [update, getInstance], [reset, update, digest, getInstance]]}
+// fail Coenables
+{reset=[[reset, getInstance, update], [update], [reset, update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, digest], [reset, getInstance, digest], [getInstance, update], [digest], [reset, getInstance]], getInstance=[[reset, getInstance, update], [update], [reset, update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, update], [reset, getInstance, digest], [getInstance, digest], [digest], [reset, getInstance]], update=[[reset, getInstance, update], [update], [reset, update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, update], [getInstance, digest], [reset, getInstance, digest], [digest], [reset, getInstance]], digest=[[reset, getInstance, update], [reset, update], [update], [reset, digest], [reset, getInstance, update, digest], [update, digest], [reset], [getInstance, update, digest], [getInstance], [reset, update, digest], [getInstance, update], [getInstance, digest], [reset, getInstance, digest], [digest], [reset, getInstance]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:47 /////////////
+//// Result Status
+Success
+//// Execution Time
+208ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>create next* updatesource updatesource* next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>create next* updatesource updatesource* next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   create -&gt; s1
+]
+s1 [
+   updatesource -&gt; s2
+   next -&gt; s1
+]
+s2 [
+   updatesource -&gt; s2
+   next -&gt; s3
+]
+s3 [
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   create -&gt; s1
+]
+s1 [
+   updatesource -&gt; s2
+   next -&gt; s1
+]
+s2 [
+   updatesource -&gt; s2
+   next -&gt; s3
+]
+s3 [
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  create -&gt; s1
+]
+s2[
+  next -&gt; s3
+  updatesource -&gt; s2
+]
+s1[
+  next -&gt; s1
+  updatesource -&gt; s2
+]
+s3[
+
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{next=[[create], [next, updatesource, create], [updatesource, create], [next, create]], create=[[]], updatesource=[[create], [next, updatesource, create], [updatesource, create], [next, create]]}
+// match Coenables
+{next=[[next, updatesource]], create=[[next, updatesource]], updatesource=[[next], [next, updatesource]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create updatesource next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  create -&gt; s1
+]
+s2[
+  next -&gt; s3
+  updatesource -&gt; s2
+]
+s1[
+  next -&gt; s1
+  updatesource -&gt; s2
+]
+s3[
+
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> create</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{next=[[create], [next, updatesource, create], [updatesource, create], [next, create]], create=[[]], updatesource=[[create], [next, updatesource, create], [updatesource, create], [next, create]]}
+// match Coenables
+{next=[[next, updatesource]], create=[[next, updatesource]], updatesource=[[next], [next, updatesource]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:50 /////////////
+//// Result Status
+Success
+//// Execution Time
+204ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(open write write* close)*</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(open write write* close)*</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   open -&gt; s1
+]
+s1 [
+   write -&gt; s2
+]
+s2 [
+   write -&gt; s2
+   close -&gt; s0
+]
+alias match = s0 
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   open -&gt; s1
+]
+s1 [
+   write -&gt; s2
+]
+s2 [
+   write -&gt; s2
+   close -&gt; s0
+]
+alias match = s0 
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  open -&gt; s1
+]
+s1[
+  write -&gt; s2
+]
+s2[
+  write -&gt; s2
+  close -&gt; s0
+]
+alias match = s0
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+    <CreationEvents> open write close</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{open=[[], [open], [open, close, write], [open, write]], write=[[], [open], [close, open, write], [open, write]], close=[[], [open], [close, open, write], [open, write]]}
+// match Enables
+{open=[[], [open, close, write]], write=[[open], [close, open, write], [open, write]], close=[[close, open, write], [open, write]]}
+// fail Coenables
+{open=[[open], [write], [write, close], [close], [open, close], [open, write, close], [open, write]], write=[[open], [write], [write, close], [close], [open, close], [open, write, close], [open, write]], close=[[open], [write], [write, close], [close], [open, close], [open, write, close], [open, write]]}
+// match Coenables
+{open=[], write=[], close=[]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  open -&gt; s1
+]
+s1[
+  write -&gt; s2
+]
+s2[
+  write -&gt; s2
+  close -&gt; s0
+]
+alias match = s0
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+    <CreationEvents> open write close</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{open=[[], [open], [open, close, write], [open, write]], write=[[], [open], [close, open, write], [open, write]], close=[[], [open], [close, open, write], [open, write]]}
+// match Enables
+{open=[[], [open, close, write]], write=[[open], [close, open, write], [open, write]], close=[[close, open, write], [open, write]]}
+// fail Coenables
+{open=[[open], [write], [write, close], [close], [open, close], [open, write, close], [open, write]], write=[[open], [write], [write, close], [close], [open, close], [open, write, close], [open, write]], close=[[open], [write], [write, close], [close], [open, close], [open, write, close], [open, write]]}
+// match Coenables
+{open=[], write=[], close=[]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:53 /////////////
+//// Result Status
+Success
+//// Execution Time
+208ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(sync asyncCreateIter) 
+            | (sync syncCreateIter accessIter)</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(sync asyncCreateIter) 
+            | (sync syncCreateIter accessIter)</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   sync -&gt; s1
+]
+s1 [
+   syncCreateIter -&gt; s2
+   asyncCreateIter -&gt; s3
+]
+s2 [
+   accessIter -&gt; s3
+]
+s3 [
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   sync -&gt; s1
+]
+s1 [
+   syncCreateIter -&gt; s2
+   asyncCreateIter -&gt; s3
+]
+s2 [
+   accessIter -&gt; s3
+]
+s3 [
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  sync -&gt; s1
+]
+s3[
+
+]
+s1[
+  syncCreateIter -&gt; s2
+  asyncCreateIter -&gt; s3
+]
+s2[
+  accessIter -&gt; s3
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> sync</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{syncCreateIter=[[sync]], accessIter=[[syncCreateIter, sync]], sync=[[]], asyncCreateIter=[[sync]]}
+// match Coenables
+{syncCreateIter=[[accessIter]], accessIter=[], sync=[[syncCreateIter, accessIter], [asyncCreateIter]], asyncCreateIter=[]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>sync syncCreateIter asyncCreateIter accessIter</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  sync -&gt; s1
+]
+s3[
+
+]
+s1[
+  syncCreateIter -&gt; s2
+  asyncCreateIter -&gt; s3
+]
+s2[
+  accessIter -&gt; s3
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> sync</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{syncCreateIter=[[sync]], accessIter=[[syncCreateIter, sync]], sync=[[]], asyncCreateIter=[[sync]]}
+// match Coenables
+{syncCreateIter=[[accessIter]], accessIter=[], sync=[[syncCreateIter, accessIter], [asyncCreateIter]], asyncCreateIter=[]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:56 /////////////
+//// Result Status
+Success
+//// Execution Time
+259ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>createColl updateMap* createIter useIter* updateMap updateMap* useIter</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>createColl updateMap* createIter useIter* updateMap updateMap* useIter</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   createColl -&gt; s1
+]
+s1 [
+   createIter -&gt; s2
+   updateMap -&gt; s1
+]
+s2 [
+   useIter -&gt; s2
+   updateMap -&gt; s3
+]
+s3 [
+   useIter -&gt; s4
+   updateMap -&gt; s3
+]
+s4 [
+]
+alias match = s4 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   createColl -&gt; s1
+]
+s1 [
+   createIter -&gt; s2
+   updateMap -&gt; s1
+]
+s2 [
+   useIter -&gt; s2
+   updateMap -&gt; s3
+]
+s3 [
+   useIter -&gt; s4
+   updateMap -&gt; s3
+]
+s4 [
+]
+alias match = s4 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  createColl -&gt; s1
+]
+s1[
+  createIter -&gt; s2
+  updateMap -&gt; s1
+]
+s4[
+
+]
+s2[
+  updateMap -&gt; s3
+  useIter -&gt; s2
+]
+s3[
+  updateMap -&gt; s3
+  useIter -&gt; s4
+]
+alias match = s4
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> createColl</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{createIter=[[createColl], [updateMap, createColl]], updateMap=[[useIter, createIter, createColl], [createIter, createColl], [createIter, updateMap, createColl], [createIter, updateMap, createColl, useIter], [createColl], [updateMap, createColl]], createColl=[[]], useIter=[[useIter, createIter, createColl], [createIter, createColl], [createIter, updateMap, createColl], [createIter, updateMap, createColl, useIter]]}
+// match Coenables
+{createIter=[[updateMap, useIter]], updateMap=[[useIter], [updateMap, useIter], [createIter, updateMap, useIter]], createColl=[[createIter, updateMap, useIter]], useIter=[[updateMap, useIter]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>createColl createIter useIter updateMap</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  createColl -&gt; s1
+]
+s1[
+  createIter -&gt; s2
+  updateMap -&gt; s1
+]
+s4[
+
+]
+s2[
+  updateMap -&gt; s3
+  useIter -&gt; s2
+]
+s3[
+  updateMap -&gt; s3
+  useIter -&gt; s4
+]
+alias match = s4
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> createColl</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{createIter=[[createColl], [updateMap, createColl]], updateMap=[[useIter, createIter, createColl], [createIter, createColl], [createIter, updateMap, createColl], [createIter, updateMap, createColl, useIter], [createColl], [updateMap, createColl]], createColl=[[]], useIter=[[useIter, createIter, createColl], [createIter, createColl], [createIter, updateMap, createColl], [createIter, updateMap, createColl, useIter]]}
+// match Coenables
+{createIter=[[updateMap, useIter]], updateMap=[[useIter], [updateMap, useIter], [createIter, updateMap, useIter]], createColl=[[createIter, updateMap, useIter]], useIter=[[updateMap, useIter]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:54:59 /////////////
+//// Result Status
+Success
+//// Execution Time
+189ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   next -&gt; s1
+]
+s1 [
+   next -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   next -&gt; s1
+]
+s1 [
+   next -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  next -&gt; s1
+]
+s2[
+
+]
+s1[
+  next -&gt; s2
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{hasnext=[], next=[[], [next]]}
+// match Coenables
+{hasnext=[], next=[[next]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  next -&gt; s1
+]
+s2[
+
+]
+s1[
+  next -&gt; s2
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{hasnext=[], next=[[], [next]]}
+// match Coenables
+{hasnext=[], next=[[next]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:03 /////////////
+//// Result Status
+Success
+//// Execution Time
+180ms
+//// Client Name
+RVMonitor
+//// Logic Name
+fsm
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start [
+        next -&gt; unsafe
+        hasnext -&gt; safe
+     ]
+     safe [
+        next -&gt; start
+        hasnext -&gt; safe 
+     ]
+     unsafe [
+        next -&gt; unsafe
+        hasnext -&gt; safe
+     ]
+
+     alias match = unsafe</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start [
+        next -&gt; unsafe
+        hasnext -&gt; safe
+     ]
+     safe [
+        next -&gt; start
+        hasnext -&gt; safe 
+     ]
+     unsafe [
+        next -&gt; unsafe
+        hasnext -&gt; safe
+     ]
+
+     alias match = unsafe</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start[
+  hasnext -&gt; safe
+  next -&gt; unsafe
+]
+unsafe[
+  hasnext -&gt; safe
+  next -&gt; unsafe
+]
+safe[
+  hasnext -&gt; safe
+  next -&gt; start
+]
+alias match = unsafe
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{hasnext=[[], [next, hasnext], [hasnext], [next]], next=[[], [next, hasnext], [hasnext], [next]]}
+// match Coenables
+{hasnext=[[hasnext, next], [next]], next=[[hasnext, next], [next]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start[
+  hasnext -&gt; safe
+  next -&gt; unsafe
+]
+unsafe[
+  hasnext -&gt; safe
+  next -&gt; unsafe
+]
+safe[
+  hasnext -&gt; safe
+  next -&gt; start
+]
+alias match = unsafe
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{hasnext=[[], [next, hasnext], [hasnext], [next]], next=[[], [next, hasnext], [hasnext], [next]]}
+// match Coenables
+{hasnext=[[hasnext, next], [next]], next=[[hasnext, next], [next]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:06 /////////////
+//// Result Status
+Success
+//// Execution Time
+161ms
+//// Client Name
+RVMonitor
+//// Logic Name
+fsm
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start [
+        hasnext -&gt; safe
+     ]
+     safe [
+        next -&gt; start
+        hasnext -&gt; safe
+     ]</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start [
+        hasnext -&gt; safe
+     ]
+     safe [
+        next -&gt; start
+        hasnext -&gt; safe
+     ]</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start[
+  hasnext -&gt; safe
+]
+safe[
+  hasnext -&gt; safe
+  next -&gt; start
+]
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{hasnext=[[], [next, hasnext], [hasnext]], next=[[], [next, hasnext], [hasnext]]}
+// fail Coenables
+{hasnext=[[hasnext, next], [hasnext], [next]], next=[[hasnext, next], [hasnext], [next]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>start[
+  hasnext -&gt; safe
+]
+safe[
+  hasnext -&gt; safe
+  next -&gt; start
+]
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{hasnext=[[], [next, hasnext], [hasnext]], next=[[], [next, hasnext], [hasnext]]}
+// fail Coenables
+{hasnext=[[hasnext, next], [hasnext], [next]], next=[[hasnext, next], [hasnext], [next]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:10 /////////////
+//// Result Status
+Success
+//// Execution Time
+200ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next endProg</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(hasnext+ next)* hasnext* endProg</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next endProg</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(hasnext+ next)* hasnext* endProg</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   hasnext -&gt; s1
+   endProg -&gt; s2
+]
+s1 [
+   hasnext -&gt; s1
+   next -&gt; s0
+   endProg -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   hasnext -&gt; s1
+   endProg -&gt; s2
+]
+s1 [
+   hasnext -&gt; s1
+   next -&gt; s0
+   endProg -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  endProg -&gt; s2
+  hasnext -&gt; s1
+]
+s1[
+  endProg -&gt; s2
+  hasnext -&gt; s1
+  next -&gt; s0
+]
+s2[
+
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> endProg hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{endProg=[[], [endProg], [hasnext], [next, hasnext], [endProg, next, hasnext], [endProg, hasnext]], hasnext=[[endProg], [], [hasnext], [endProg, next, hasnext], [next, hasnext], [endProg, hasnext]], next=[[endProg], [], [hasnext], [endProg, next, hasnext], [next, hasnext], [endProg, hasnext]]}
+// fail Coenables
+{endProg=[[endProg], [hasnext], [hasnext, next], [endProg, hasnext, next], [next], [endProg, next], [endProg, hasnext]], hasnext=[[endProg], [hasnext], [endProg, hasnext, next], [hasnext, next], [next], [endProg, next], [endProg, hasnext]], next=[[endProg], [hasnext], [endProg, hasnext, next], [hasnext, next], [next], [endProg, next], [endProg, hasnext]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  endProg -&gt; s2
+  hasnext -&gt; s1
+]
+s1[
+  endProg -&gt; s2
+  hasnext -&gt; s1
+  next -&gt; s0
+]
+s2[
+
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> endProg hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{endProg=[[], [endProg], [hasnext], [next, hasnext], [endProg, next, hasnext], [endProg, hasnext]], hasnext=[[endProg], [], [hasnext], [endProg, next, hasnext], [next, hasnext], [endProg, hasnext]], next=[[endProg], [], [hasnext], [endProg, next, hasnext], [next, hasnext], [endProg, hasnext]]}
+// fail Coenables
+{endProg=[[endProg], [hasnext], [hasnext, next], [endProg, hasnext, next], [next], [endProg, next], [endProg, hasnext]], hasnext=[[endProg], [hasnext], [endProg, hasnext, next], [hasnext, next], [next], [endProg, next], [endProg, hasnext]], next=[[endProg], [hasnext], [endProg, hasnext, next], [hasnext, next], [next], [endProg, next], [endProg, hasnext]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:14 /////////////
+//// Result Status
+Success
+//// Execution Time
+234ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>write close endProg</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>write* close+ endProg</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>write close endProg</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>write* close+ endProg</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>write close endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   write -&gt; s0
+   close -&gt; s1
+]
+s1 [
+   close -&gt; s1
+   endProg -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>write close endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   write -&gt; s0
+   close -&gt; s1
+]
+s1 [
+   close -&gt; s1
+   endProg -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>write close endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  write -&gt; s0
+  close -&gt; s1
+]
+s1[
+  endProg -&gt; s2
+  close -&gt; s1
+]
+s2[
+
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> endProg write close</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{endProg=[[], [write], [close, write], [endProg, close, write], [close], [endProg, close]], write=[[], [write], [endProg, close, write], [close, write], [endProg, close], [close]], close=[[], [write], [endProg, close, write], [close, write], [endProg, close], [close]]}
+// fail Coenables
+{endProg=[[endProg], [write], [write, close], [endProg, write, close], [close], [endProg, close], [endProg, write]], write=[[endProg], [write], [write, close], [endProg, write, close], [close], [endProg, close], [endProg, write]], close=[[endProg], [write], [write, close], [endProg, write, close], [close], [endProg, close], [endProg, write]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>write close endProg</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  write -&gt; s0
+  close -&gt; s1
+]
+s1[
+  endProg -&gt; s2
+  close -&gt; s1
+]
+s2[
+
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> endProg write close</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{endProg=[[], [write], [close, write], [endProg, close, write], [close], [endProg, close]], write=[[], [write], [endProg, close, write], [close, write], [endProg, close], [close]], close=[[], [write], [endProg, close, write], [close, write], [endProg, close], [close]]}
+// fail Coenables
+{endProg=[[endProg], [write], [write, close], [endProg, write, close], [close], [endProg, close], [endProg, write]], write=[[endProg], [write], [write, close], [endProg, write, close], [close], [endProg, close], [endProg, write]], close=[[endProg], [write], [write, close], [endProg, write, close], [close], [endProg, close], [endProg, write]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:17 /////////////
+//// Result Status
+Success
+//// Execution Time
+211ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>fun1 (fun1 | fun2)* mainend</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>fun1 (fun1 | fun2)* mainend</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   fun1 -&gt; s1
+]
+s1 [
+   fun1 -&gt; s1
+   fun2 -&gt; s1
+   mainend -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   fun1 -&gt; s1
+]
+s1 [
+   fun1 -&gt; s1
+   fun2 -&gt; s1
+   mainend -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  fun1 -&gt; s1
+]
+s2[
+
+]
+s1[
+  mainend -&gt; s2
+  fun1 -&gt; s1
+  fun2 -&gt; s1
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+    <CreationEvents> mainend fun1 fun2</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{mainend=[[], [fun1], [fun2, fun1], [mainend, fun2, fun1], [mainend, fun1]], fun1=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]], fun2=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]]}
+// match Enables
+{mainend=[[fun1], [fun2, fun1]], fun1=[[], [fun1], [fun2, fun1]], fun2=[[fun1], [fun2, fun1]]}
+// fail Coenables
+{mainend=[[mainend], [fun1], [fun1, fun2], [mainend, fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun1=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun2=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]]}
+// match Coenables
+{mainend=[], fun1=[], fun2=[]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  fun1 -&gt; s1
+]
+s2[
+
+]
+s1[
+  mainend -&gt; s2
+  fun1 -&gt; s1
+  fun2 -&gt; s1
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+    <CreationEvents> mainend fun1 fun2</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{mainend=[[], [fun1], [fun2, fun1], [mainend, fun2, fun1], [mainend, fun1]], fun1=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]], fun2=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]]}
+// match Enables
+{mainend=[[fun1], [fun2, fun1]], fun1=[[], [fun1], [fun2, fun1]], fun2=[[fun1], [fun2, fun1]]}
+// fail Coenables
+{mainend=[[mainend], [fun1], [fun1, fun2], [mainend, fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun1=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun2=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]]}
+// match Coenables
+{mainend=[], fun1=[], fun2=[]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:21 /////////////
+//// Result Status
+Success
+//// Execution Time
+227ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>insert_coin push_button result</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(insert_coin push_button result)+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>insert_coin push_button result</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(insert_coin push_button result)+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>insert_coin push_button result</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   insert_coin -&gt; s1
+]
+s1 [
+   push_button -&gt; s2
+]
+s2 [
+   result -&gt; s3
+]
+s3 [
+   insert_coin -&gt; s1
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>insert_coin push_button result</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   insert_coin -&gt; s1
+]
+s1 [
+   push_button -&gt; s2
+]
+s2 [
+   result -&gt; s3
+]
+s3 [
+   insert_coin -&gt; s1
+]
+alias match = s3 
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>insert_coin push_button result</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  insert_coin -&gt; s1
+]
+s1[
+  push_button -&gt; s2
+]
+s3[
+  insert_coin -&gt; s1
+]
+s2[
+  result -&gt; s3
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> insert_coin</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{insert_coin=[[], [insert_coin, result, push_button]], push_button=[[insert_coin], [result, insert_coin, push_button]], result=[[result, insert_coin, push_button], [insert_coin, push_button]]}
+// match Coenables
+{insert_coin=[[push_button, result], [insert_coin, push_button, result]], push_button=[[result], [insert_coin, push_button, result]], result=[[insert_coin, push_button, result]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>insert_coin push_button result</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  insert_coin -&gt; s1
+]
+s1[
+  push_button -&gt; s2
+]
+s3[
+  insert_coin -&gt; s1
+]
+s2[
+  result -&gt; s3
+]
+alias match = s3
+</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents> insert_coin</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{insert_coin=[[], [insert_coin, result, push_button]], push_button=[[insert_coin], [result, insert_coin, push_button]], result=[[result, insert_coin, push_button], [insert_coin, push_button]]}
+// match Coenables
+{insert_coin=[[push_button, result], [insert_coin, push_button, result]], push_button=[[result], [insert_coin, push_button, result]], result=[[insert_coin, push_button, result]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:23 /////////////
+//// Result Status
+Success
+//// Execution Time
+202ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(hasnext hasnext* next)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>(hasnext hasnext* next)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   hasnext -&gt; s1
+]
+s1 [
+   hasnext -&gt; s1
+   next -&gt; s0
+]
+alias match = s0 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   hasnext -&gt; s1
+]
+s1 [
+   hasnext -&gt; s1
+   next -&gt; s0
+]
+alias match = s0 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  hasnext -&gt; s1
+]
+s1[
+  next -&gt; s0
+  hasnext -&gt; s1
+]
+alias match = s0
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> next hasnext</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{next=[[], [hasnext], [next, hasnext]], hasnext=[[], [hasnext], [next, hasnext]]}
+// fail Coenables
+{next=[[next], [hasnext], [next, hasnext]], hasnext=[[next], [hasnext], [next, hasnext]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  hasnext -&gt; s1
+]
+s1[
+  next -&gt; s0
+  hasnext -&gt; s1
+]
+alias match = s0
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> next hasnext</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{next=[[], [hasnext], [next, hasnext]], hasnext=[[], [hasnext], [next, hasnext]]}
+// fail Coenables
+{next=[[next], [hasnext], [next, hasnext]], hasnext=[[next], [hasnext], [next, hasnext]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:27 /////////////
+//// Result Status
+Success
+//// Execution Time
+189ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>fun1 (fun1 | fun2)* mainend</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>fun1 (fun1 | fun2)* mainend</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   fun1 -&gt; s1
+]
+s1 [
+   fun1 -&gt; s1
+   fun2 -&gt; s1
+   mainend -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   fun1 -&gt; s1
+]
+s1 [
+   fun1 -&gt; s1
+   fun2 -&gt; s1
+   mainend -&gt; s2
+]
+s2 [
+]
+alias match = s2 
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  fun1 -&gt; s1
+]
+s2[
+
+]
+s1[
+  mainend -&gt; s2
+  fun1 -&gt; s1
+  fun2 -&gt; s1
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+    <CreationEvents> mainend fun1 fun2</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{mainend=[[], [fun1], [fun2, fun1], [mainend, fun2, fun1], [mainend, fun1]], fun1=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]], fun2=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]]}
+// match Enables
+{mainend=[[fun1], [fun2, fun1]], fun1=[[], [fun1], [fun2, fun1]], fun2=[[fun1], [fun2, fun1]]}
+// fail Coenables
+{mainend=[[mainend], [fun1], [fun1, fun2], [mainend, fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun1=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun2=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]]}
+// match Coenables
+{mainend=[], fun1=[], fun2=[]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>fun1 fun2 mainend</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  fun1 -&gt; s1
+]
+s2[
+
+]
+s1[
+  mainend -&gt; s2
+  fun1 -&gt; s1
+  fun2 -&gt; s1
+]
+alias match = s2
+</Formula>
+    </Property>
+    <Categories>fail match</Categories>
+    <CreationEvents> mainend fun1 fun2</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{mainend=[[], [fun1], [fun2, fun1], [mainend, fun2, fun1], [mainend, fun1]], fun1=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]], fun2=[[], [fun1], [mainend, fun2, fun1], [fun2, fun1], [mainend, fun1]]}
+// match Enables
+{mainend=[[fun1], [fun2, fun1]], fun1=[[], [fun1], [fun2, fun1]], fun2=[[fun1], [fun2, fun1]]}
+// fail Coenables
+{mainend=[[mainend], [fun1], [fun1, fun2], [mainend, fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun1=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]], fun2=[[mainend], [fun1], [mainend, fun1, fun2], [fun1, fun2], [fun2], [mainend, fun2], [mainend, fun1]]}
+// match Coenables
+{mainend=[], fun1=[], fun2=[]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:30 /////////////
+//// Result Status
+Success
+//// Execution Time
+202ms
+//// Client Name
+RVMonitor
+//// Logic Name
+ere
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>create (hasnext hasnext* next)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create hasnext next</Events>
+    <Property>
+        <Logic>ere</Logic>
+        <Formula>create (hasnext hasnext* next)*</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from ere
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   create -&gt; s1
+]
+s1 [
+   hasnext -&gt; s2
+]
+s2 [
+   hasnext -&gt; s2
+   next -&gt; s1
+]
+alias match = s1 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Input to fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0 [
+   create -&gt; s1
+]
+s1 [
+   hasnext -&gt; s2
+]
+s2 [
+   hasnext -&gt; s2
+   next -&gt; s1
+]
+alias match = s1 
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 2. Logic Plugin Output from fsm
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  create -&gt; s1
+]
+s2[
+  hasnext -&gt; s2
+  next -&gt; s1
+]
+s1[
+  hasnext -&gt; s2
+]
+alias match = s1
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> create hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{create=[[], [create], [next, create, hasnext], [create, hasnext]], hasnext=[[], [create], [create, next, hasnext], [create, hasnext]], next=[[], [create], [next, create, hasnext], [create, hasnext]]}
+// fail Coenables
+{create=[[create], [hasnext], [hasnext, next], [next], [create, next], [create, hasnext, next], [create, hasnext]], hasnext=[[create], [hasnext], [hasnext, next], [next], [create, next], [create, hasnext, next], [create, hasnext]], next=[[create], [hasnext], [hasnext, next], [next], [create, next], [create, hasnext, next], [create, hasnext]]}
+</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>create hasnext next</Events>
+    <Property>
+        <Logic>fsm</Logic>
+        <Formula>s0[
+  create -&gt; s1
+]
+s2[
+  hasnext -&gt; s2
+  next -&gt; s1
+]
+s1[
+  hasnext -&gt; s2
+]
+alias match = s1
+</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents> create hasnext next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{create=[[], [create], [next, create, hasnext], [create, hasnext]], hasnext=[[], [create], [create, next, hasnext], [create, hasnext]], next=[[], [create], [next, create, hasnext], [create, hasnext]]}
+// fail Coenables
+{create=[[create], [hasnext], [hasnext, next], [next], [create, next], [create, hasnext, next], [create, hasnext]], hasnext=[[create], [hasnext], [hasnext, next], [next], [create, next], [create, hasnext, next], [create, hasnext]], next=[[create], [hasnext], [hasnext, next], [next], [create, next], [create, hasnext, next], [create, hasnext]]}
+</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:34 /////////////
+//// Result Status
+Success
+//// Execution Time
+183ms
+//// Client Name
+RVMonitor
+//// Logic Name
+srs
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>done a b c</Events>
+    <Property>
+        <Logic>srs</Logic>
+        <Formula>b a -&gt; a b .
+        c a -&gt; a c .
+        c b -&gt; b c .
+        a b -&gt; E .
+        E b -&gt; b E .
+        E a -&gt; a E .
+        E c -&gt; #epsilon .
+        c E -&gt; #epsilon .
+        ^ done -&gt; #succeed .
+        a done -&gt; #fail .
+        b done -&gt; #fail .
+        c done -&gt; #fail .</Formula>
+    </Property>
+    <Categories>fail succeed</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to srs
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>done a b c</Events>
+    <Property>
+        <Logic>srs</Logic>
+        <Formula>b a -&gt; a b .
+        c a -&gt; a c .
+        c b -&gt; b c .
+        a b -&gt; E .
+        E b -&gt; b E .
+        E a -&gt; a E .
+        E c -&gt; #epsilon .
+        c E -&gt; #epsilon .
+        ^ done -&gt; #succeed .
+        a done -&gt; #fail .
+        b done -&gt; #fail .
+        c done -&gt; #fail .</Formula>
+    </Property>
+    <Categories>fail succeed</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from srs
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>done a b c</Events>
+    <Property>
+        <Logic>srs</Logic>
+        <Formula>
+true
+false
+&lt;0 @ 0&gt;
+[  c -&gt; [0] &lt;3 @ 1&gt;
+  b -&gt; [0] &lt;1 @ 1&gt;
+  E -&gt; [0] &lt;8 @ 1&gt;
+  ^ -&gt; [0] &lt;13 @ 1&gt;
+  done -&gt; [0] &lt;0 @ 0&gt;
+  a -&gt; [0] &lt;6 @ 1&gt;
+]
+&lt;1 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [1] &lt;0 @ 0&gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;16 @ 2 matches b done  -&gt; #fail&gt;
+  a -&gt; [0] &lt;2 @ 2 matches b a  -&gt; a b &gt;
+]
+&lt;2 @ 2 matches b a  -&gt; a b &gt;
+[  c -&gt; [1] &lt;6 @ 1&gt;
+  b -&gt; [1] &lt;6 @ 1&gt;
+  E -&gt; [1] &lt;6 @ 1&gt;
+  ^ -&gt; [1] &lt;6 @ 1&gt;
+  done -&gt; [1] &lt;6 @ 1&gt;
+  a -&gt; [1] &lt;6 @ 1&gt;
+]
+&lt;3 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [0] &lt;5 @ 2 matches c b  -&gt; b c &gt;
+  E -&gt; [0] &lt;12 @ 2 matches c E  -&gt; #epsilon&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;17 @ 2 matches c done  -&gt; #fail&gt;
+  a -&gt; [0] &lt;4 @ 2 matches c a  -&gt; a c &gt;
+]
+&lt;4 @ 2 matches c a  -&gt; a c &gt;
+[  c -&gt; [1] &lt;6 @ 1&gt;
+  b -&gt; [1] &lt;6 @ 1&gt;
+  E -&gt; [1] &lt;6 @ 1&gt;
+  ^ -&gt; [1] &lt;6 @ 1&gt;
+  done -&gt; [1] &lt;6 @ 1&gt;
+  a -&gt; [1] &lt;6 @ 1&gt;
+]
+&lt;5 @ 2 matches c b  -&gt; b c &gt;
+[  c -&gt; [1] &lt;1 @ 1&gt;
+  b -&gt; [1] &lt;1 @ 1&gt;
+  E -&gt; [1] &lt;1 @ 1&gt;
+  ^ -&gt; [1] &lt;1 @ 1&gt;
+  done -&gt; [1] &lt;1 @ 1&gt;
+  a -&gt; [1] &lt;1 @ 1&gt;
+]
+&lt;6 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [0] &lt;7 @ 2 matches a b  -&gt; E &gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;15 @ 2 matches a done  -&gt; #fail&gt;
+  a -&gt; [1] &lt;0 @ 0&gt;
+]
+&lt;7 @ 2 matches a b  -&gt; E &gt;
+[  c -&gt; [1] &lt;1 @ 1&gt;
+  b -&gt; [1] &lt;1 @ 1&gt;
+  E -&gt; [1] &lt;1 @ 1&gt;
+  ^ -&gt; [1] &lt;1 @ 1&gt;
+  done -&gt; [1] &lt;1 @ 1&gt;
+  a -&gt; [1] &lt;1 @ 1&gt;
+]
+&lt;8 @ 1&gt;
+[  c -&gt; [0] &lt;11 @ 2 matches E c  -&gt; #epsilon&gt;
+  b -&gt; [0] &lt;9 @ 2 matches E b  -&gt; b E &gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [1] &lt;0 @ 0&gt;
+  a -&gt; [0] &lt;10 @ 2 matches E a  -&gt; a E &gt;
+]
+&lt;9 @ 2 matches E b  -&gt; b E &gt;
+[  c -&gt; [1] &lt;1 @ 1&gt;
+  b -&gt; [1] &lt;1 @ 1&gt;
+  E -&gt; [1] &lt;1 @ 1&gt;
+  ^ -&gt; [1] &lt;1 @ 1&gt;
+  done -&gt; [1] &lt;1 @ 1&gt;
+  a -&gt; [1] &lt;1 @ 1&gt;
+]
+&lt;10 @ 2 matches E a  -&gt; a E &gt;
+[  c -&gt; [1] &lt;6 @ 1&gt;
+  b -&gt; [1] &lt;6 @ 1&gt;
+  E -&gt; [1] &lt;6 @ 1&gt;
+  ^ -&gt; [1] &lt;6 @ 1&gt;
+  done -&gt; [1] &lt;6 @ 1&gt;
+  a -&gt; [1] &lt;6 @ 1&gt;
+]
+&lt;11 @ 2 matches E c  -&gt; #epsilon&gt;
+[  c -&gt; [1] &lt;3 @ 1&gt;
+  b -&gt; [1] &lt;3 @ 1&gt;
+  E -&gt; [1] &lt;3 @ 1&gt;
+  ^ -&gt; [1] &lt;3 @ 1&gt;
+  done -&gt; [1] &lt;3 @ 1&gt;
+  a -&gt; [1] &lt;3 @ 1&gt;
+]
+&lt;12 @ 2 matches c E  -&gt; #epsilon&gt;
+[  c -&gt; [1] &lt;8 @ 1&gt;
+  b -&gt; [1] &lt;8 @ 1&gt;
+  E -&gt; [1] &lt;8 @ 1&gt;
+  ^ -&gt; [1] &lt;8 @ 1&gt;
+  done -&gt; [1] &lt;8 @ 1&gt;
+  a -&gt; [1] &lt;8 @ 1&gt;
+]
+&lt;13 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [1] &lt;0 @ 0&gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;14 @ 2 matches ^ done  -&gt; #succeed&gt;
+  a -&gt; [1] &lt;0 @ 0&gt;
+]
+&lt;14 @ 2 matches ^ done  -&gt; #succeed&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+&lt;15 @ 2 matches a done  -&gt; #fail&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+&lt;16 @ 2 matches b done  -&gt; #fail&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+&lt;17 @ 2 matches c done  -&gt; #fail&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+</Formula>
+    </Property>
+    <Categories>fail succeed</Categories>
+    <Message>done</Message>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>done a b c</Events>
+    <Property>
+        <Logic>srs</Logic>
+        <Formula>
+true
+false
+&lt;0 @ 0&gt;
+[  c -&gt; [0] &lt;3 @ 1&gt;
+  b -&gt; [0] &lt;1 @ 1&gt;
+  E -&gt; [0] &lt;8 @ 1&gt;
+  ^ -&gt; [0] &lt;13 @ 1&gt;
+  done -&gt; [0] &lt;0 @ 0&gt;
+  a -&gt; [0] &lt;6 @ 1&gt;
+]
+&lt;1 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [1] &lt;0 @ 0&gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;16 @ 2 matches b done  -&gt; #fail&gt;
+  a -&gt; [0] &lt;2 @ 2 matches b a  -&gt; a b &gt;
+]
+&lt;2 @ 2 matches b a  -&gt; a b &gt;
+[  c -&gt; [1] &lt;6 @ 1&gt;
+  b -&gt; [1] &lt;6 @ 1&gt;
+  E -&gt; [1] &lt;6 @ 1&gt;
+  ^ -&gt; [1] &lt;6 @ 1&gt;
+  done -&gt; [1] &lt;6 @ 1&gt;
+  a -&gt; [1] &lt;6 @ 1&gt;
+]
+&lt;3 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [0] &lt;5 @ 2 matches c b  -&gt; b c &gt;
+  E -&gt; [0] &lt;12 @ 2 matches c E  -&gt; #epsilon&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;17 @ 2 matches c done  -&gt; #fail&gt;
+  a -&gt; [0] &lt;4 @ 2 matches c a  -&gt; a c &gt;
+]
+&lt;4 @ 2 matches c a  -&gt; a c &gt;
+[  c -&gt; [1] &lt;6 @ 1&gt;
+  b -&gt; [1] &lt;6 @ 1&gt;
+  E -&gt; [1] &lt;6 @ 1&gt;
+  ^ -&gt; [1] &lt;6 @ 1&gt;
+  done -&gt; [1] &lt;6 @ 1&gt;
+  a -&gt; [1] &lt;6 @ 1&gt;
+]
+&lt;5 @ 2 matches c b  -&gt; b c &gt;
+[  c -&gt; [1] &lt;1 @ 1&gt;
+  b -&gt; [1] &lt;1 @ 1&gt;
+  E -&gt; [1] &lt;1 @ 1&gt;
+  ^ -&gt; [1] &lt;1 @ 1&gt;
+  done -&gt; [1] &lt;1 @ 1&gt;
+  a -&gt; [1] &lt;1 @ 1&gt;
+]
+&lt;6 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [0] &lt;7 @ 2 matches a b  -&gt; E &gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;15 @ 2 matches a done  -&gt; #fail&gt;
+  a -&gt; [1] &lt;0 @ 0&gt;
+]
+&lt;7 @ 2 matches a b  -&gt; E &gt;
+[  c -&gt; [1] &lt;1 @ 1&gt;
+  b -&gt; [1] &lt;1 @ 1&gt;
+  E -&gt; [1] &lt;1 @ 1&gt;
+  ^ -&gt; [1] &lt;1 @ 1&gt;
+  done -&gt; [1] &lt;1 @ 1&gt;
+  a -&gt; [1] &lt;1 @ 1&gt;
+]
+&lt;8 @ 1&gt;
+[  c -&gt; [0] &lt;11 @ 2 matches E c  -&gt; #epsilon&gt;
+  b -&gt; [0] &lt;9 @ 2 matches E b  -&gt; b E &gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [1] &lt;0 @ 0&gt;
+  a -&gt; [0] &lt;10 @ 2 matches E a  -&gt; a E &gt;
+]
+&lt;9 @ 2 matches E b  -&gt; b E &gt;
+[  c -&gt; [1] &lt;1 @ 1&gt;
+  b -&gt; [1] &lt;1 @ 1&gt;
+  E -&gt; [1] &lt;1 @ 1&gt;
+  ^ -&gt; [1] &lt;1 @ 1&gt;
+  done -&gt; [1] &lt;1 @ 1&gt;
+  a -&gt; [1] &lt;1 @ 1&gt;
+]
+&lt;10 @ 2 matches E a  -&gt; a E &gt;
+[  c -&gt; [1] &lt;6 @ 1&gt;
+  b -&gt; [1] &lt;6 @ 1&gt;
+  E -&gt; [1] &lt;6 @ 1&gt;
+  ^ -&gt; [1] &lt;6 @ 1&gt;
+  done -&gt; [1] &lt;6 @ 1&gt;
+  a -&gt; [1] &lt;6 @ 1&gt;
+]
+&lt;11 @ 2 matches E c  -&gt; #epsilon&gt;
+[  c -&gt; [1] &lt;3 @ 1&gt;
+  b -&gt; [1] &lt;3 @ 1&gt;
+  E -&gt; [1] &lt;3 @ 1&gt;
+  ^ -&gt; [1] &lt;3 @ 1&gt;
+  done -&gt; [1] &lt;3 @ 1&gt;
+  a -&gt; [1] &lt;3 @ 1&gt;
+]
+&lt;12 @ 2 matches c E  -&gt; #epsilon&gt;
+[  c -&gt; [1] &lt;8 @ 1&gt;
+  b -&gt; [1] &lt;8 @ 1&gt;
+  E -&gt; [1] &lt;8 @ 1&gt;
+  ^ -&gt; [1] &lt;8 @ 1&gt;
+  done -&gt; [1] &lt;8 @ 1&gt;
+  a -&gt; [1] &lt;8 @ 1&gt;
+]
+&lt;13 @ 1&gt;
+[  c -&gt; [1] &lt;0 @ 0&gt;
+  b -&gt; [1] &lt;0 @ 0&gt;
+  E -&gt; [1] &lt;0 @ 0&gt;
+  ^ -&gt; [1] &lt;0 @ 0&gt;
+  done -&gt; [0] &lt;14 @ 2 matches ^ done  -&gt; #succeed&gt;
+  a -&gt; [1] &lt;0 @ 0&gt;
+]
+&lt;14 @ 2 matches ^ done  -&gt; #succeed&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+&lt;15 @ 2 matches a done  -&gt; #fail&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+&lt;16 @ 2 matches b done  -&gt; #fail&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+&lt;17 @ 2 matches c done  -&gt; #fail&gt;
+[  c -&gt; [2] &lt;0 @ 0&gt;
+  b -&gt; [2] &lt;0 @ 0&gt;
+  E -&gt; [2] &lt;0 @ 0&gt;
+  ^ -&gt; [2] &lt;0 @ 0&gt;
+  done -&gt; [2] &lt;0 @ 0&gt;
+  a -&gt; [2] &lt;0 @ 0&gt;
+]
+</Formula>
+    </Property>
+    <Categories>fail succeed</Categories>
+    <Message>done</Message>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:46 /////////////
+//// Result Status
+Success
+//// Execution Time
+199ms
+//// Client Name
+RVMonitor
+//// Logic Name
+cfg
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to cfg
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from cfg
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents>next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{next=[[next], []]}</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>hasnext next</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; next next</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents>next</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{next=[[next], []]}</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:49 /////////////
+//// Result Status
+Success
+//// Execution Time
+260ms
+//// Client Name
+RVMonitor
+//// Logic Name
+cfg
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; open SafeWrite close write, 
+      SafeWrite -&gt; SafeWrite S | SafeWrite write | epsilon</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to cfg
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; open SafeWrite close write, 
+      SafeWrite -&gt; SafeWrite S | SafeWrite write | epsilon</Formula>
+    </Property>
+    <Categories>match</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from cfg
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; open SafeWrite close write, 
+      SafeWrite -&gt; SafeWrite S | SafeWrite write | epsilon</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents>open</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{close=[[write, close, open], [open], [write, open]], write=[[close, open], [close, write, open], [open], [write, open]], open=[[], [write, close, open], [open], [write, open]]}</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open write close</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; open SafeWrite close write, 
+      SafeWrite -&gt; SafeWrite S | SafeWrite write | epsilon</Formula>
+    </Property>
+    <Categories>match</Categories>
+    <CreationEvents>open</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// match Enables
+{close=[[write, close, open], [open], [write, open]], write=[[close, open], [close, write, open], [open], [write, open]], open=[[], [write, close, open], [open], [write, open]]}</EnableSets>
+</mop>
+
+///////////// A request at 11/03/2014 11:55:53 /////////////
+//// Result Status
+Success
+//// Execution Time
+241ms
+//// Client Name
+RVMonitor
+//// Logic Name
+cfg
+//// Logic Repository Input
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open close beginCall endCall</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; A S | epsilon, 
+      A -&gt; A beginCall A endCall | A open A close | epsilon</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Input to cfg
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open close beginCall endCall</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; A S | epsilon, 
+      A -&gt; A beginCall A endCall | A open A close | epsilon</Formula>
+    </Property>
+    <Categories>fail</Categories>
+</mop>
+
+//// 1. Logic Plugin Output from cfg
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open close beginCall endCall</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; A S | epsilon, 
+      A -&gt; A beginCall A endCall | A open A close | epsilon</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents>open close beginCall endCall</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{beginCall=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]], endCall=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]], close=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]], open=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]]}</EnableSets>
+</mop>
+
+//// Logic Repository Output
+
+<mop>
+    <Client>RVMonitor</Client>
+    <Events>open close beginCall endCall</Events>
+    <Property>
+        <Logic>cfg</Logic>
+        <Formula>S -&gt; A S | epsilon, 
+      A -&gt; A beginCall A endCall | A open A close | epsilon</Formula>
+    </Property>
+    <Categories>fail</Categories>
+    <CreationEvents>open close beginCall endCall</CreationEvents>
+    <Message>done</Message>
+    <EnableSets>// fail Enables
+{beginCall=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]], endCall=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]], close=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]], open=[[], [close, endCall], [beginCall], [endCall, beginCall, close, open], [beginCall, open], [close, endCall, beginCall], [beginCall, endCall, open], [beginCall, endCall], [endCall], [close, beginCall], [close, beginCall, open], [close, open], [endCall, open], [close], [open], [close, endCall, open]]}</EnableSets>
+</mop>
+
